@@ -24,4 +24,13 @@ public abstract class PlayaBowl implements BowlProfile {
         return calories;
     }
 
+    public void setCalories(int calories) {
+        this.calories = calories;
+    }
+
+    public boolean isHealthy() {
+        return calories <= 750;
+    }
+
+    public abstract void describeBowlBriefly(StringBuilder description);
 }
