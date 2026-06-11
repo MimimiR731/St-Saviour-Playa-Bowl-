@@ -3,19 +3,14 @@ public class VegetarianBowl extends PlayaBowl {
     private boolean granola; 
     private boolean chiaSeeds;
 
-    public VegetarianBowl(String name, String base, int calories, boolean granola, boolean chiaSeeds) {
+    public VegetarianBowl(String name, String base, int calories, boolean granola) {
         super(name, base, calories);
         this.granola = granola;
-        this.chiaSeeds = chiaSeeds;
-    
     }
 
-    public void addVegetables(boolean addGranola, boolean addChiaSeeds) {
+    public void addVegetables(boolean addGranola) {
         if (addGranola) {
             granola = true;
-        }
-        if (addChiaSeeds) {
-            chiaSeeds = true;
         }
     }
 
@@ -25,10 +20,8 @@ public class VegetarianBowl extends PlayaBowl {
         if (granola) {
             description.append(", granola");
         }
-        if (chiaSeeds) {
-            description.append(", chia seeds");
-        }
     }
+
     @Override
     public String describeBowl() {
         return getBase() + " is a vegetarian bowl.";
