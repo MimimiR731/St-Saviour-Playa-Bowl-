@@ -33,4 +33,6 @@ public abstract class PlayaBowl implements BowlProfile {
     }
 
     public abstract void describeBowlBriefly(StringBuilder description);
+ {
+    }
 }

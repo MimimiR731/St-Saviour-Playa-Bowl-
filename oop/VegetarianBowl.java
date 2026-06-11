@@ -1,3 +1,4 @@
+package oop;
 public class VegetarianBowl extends PlayaBowl {
     private boolean granola; 
     private boolean chiaSeeds;
@@ -6,6 +7,7 @@ public class VegetarianBowl extends PlayaBowl {
         super(name, base, calories);
         this.granola = granola;
         this.chiaSeeds = chiaSeeds;
+    
     }
 
     public void addVegetables(boolean addGranola, boolean addChiaSeeds) {
@@ -27,5 +29,8 @@ public class VegetarianBowl extends PlayaBowl {
             description.append(", chia seeds");
         }
     }
-
+    @Override
+    public String describeBowl() {
+        return getBase() + " is a vegetarian bowl.";
+    }
 }   

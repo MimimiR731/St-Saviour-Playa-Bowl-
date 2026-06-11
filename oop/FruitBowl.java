@@ -1,3 +1,4 @@
+package oop;
 public class FruitBowl extends PlayaBowl {
     private boolean strawberries; 
     private boolean bananas;
@@ -8,7 +9,7 @@ public class FruitBowl extends PlayaBowl {
         this.bananas = bananas;
     }
 
-    public void addFruit(boolean addStrawberries, boolean addBananas) {
+    public void addStrawberriesAndBananas(boolean addStrawberries, boolean addBananas) {
         if (addStrawberries) {
             strawberries = true;
         }
@@ -19,7 +20,7 @@ public class FruitBowl extends PlayaBowl {
 
     @Override
     public void describeBowlBriefly(StringBuilder description) {
-        description.append(getName()).append(" with ").append(getBase());
+        description.append(getBase());
         if (strawberries) {
             description.append(", strawberries");
         }
@@ -27,5 +28,9 @@ public class FruitBowl extends PlayaBowl {
             description.append(", bananas");
         }
     }
-
+        @Override
+        public String describeBowl() {
+            return getName() + " is a fruit bowl.";
+        }
+    
 }
